@@ -13,3 +13,10 @@ create table modulos(
 id int auto_increment,
 nome_modulo varchar(35),
 primary key(id))engine=innodb charset=utf8;
+
+create table modulo_subfunction(
+id int auto_increment,
+nome_submodulo varchar(35),
+modulo int,
+primary key(id),
+foreign key(modulo) references modulos(id))engine=innodb charset=utf8;
